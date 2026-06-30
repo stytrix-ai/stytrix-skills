@@ -41,4 +41,5 @@ Once connected, just ask your agent things like:
 - Website: https://www.stytrix.com
 - MCP docs: https://www.stytrix.com/mcp
 - MCP server repo: https://github.com/hirosichen/stytrix-mcp
+- CLI: https://github.com/hirosichen/stytrix-cli (`npx stytrix`)
 - Support: hello@stytrix.com

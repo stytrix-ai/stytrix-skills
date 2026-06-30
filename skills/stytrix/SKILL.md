@@ -5,6 +5,7 @@ compatibility: Requires the StyTrix MCP server to be connected in the agent (Cla
 metadata:
   author: StyTrix
   source: https://github.com/hirosichen/stytrix-skills
+allowed-tools: Bash(npx -y stytrix *)
 user-invocable: true
 ---
 
@@ -21,6 +22,17 @@ The StyTrix tools come from the StyTrix MCP server. If you don't see tools like 
 - **Cursor / Codex / Gemini:** add the same URL to the MCP config.
 
 Authentication is OAuth 2.1 (no API key). Read-only tools are free; generation tools spend StyTrix credits. Docs: https://www.stytrix.com/mcp
+
+### Two ways to use StyTrix
+
+- **Preferred — MCP tools.** If the StyTrix MCP is connected, call the tools directly (`whoami`, `generate_concept`, …). The rest of this skill assumes this path.
+- **Fallback — the `stytrix` CLI.** If MCP tools aren't available (e.g. a terminal agent with no MCP connection), use the StyTrix CLI over Bash — it signs in with the same OAuth and exposes the same capabilities:
+  - `npx -y stytrix login` (one-time browser sign-in)
+  - `npx -y stytrix projects` / `credits` / `whoami`
+  - `npx -y stytrix generate --project <id> --prompt "..." [--mode photorealistic|true_to_sketch] [--ref <imageUrl>]`
+  - `npx -y stytrix call <tool> '<json-args>'` for any other tool
+
+  The CLI maps 1:1 to the tools below; the same rules and workflows apply.
 
 ## The tools
 
