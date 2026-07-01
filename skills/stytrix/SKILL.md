@@ -38,7 +38,9 @@ Authentication is OAuth 2.1 (no API key). Read-only tools are free; generation t
 
 **Read-only (free):** `whoami`, `list_projects`, `get_credits`, `check_video`, `check_style_training`.
 
-**Write (spend credits; results land on a canvas):** `create_project`, `add_image_to_canvas`, `generate_concept` (mode: `photorealistic` | `true_to_sketch`), `mix_match`, `generate_style`, `generate_model`, `generate_fabric`, `upscale_image`, `remove_background`, `image_to_sketch`, `multi_angle`, `split_layer`, `start_video` (+ `check_video`), `start_style_training` (+ `check_style_training`).
+**Write (spend credits; results land on a canvas):** `create_project`, `add_image_to_canvas`, `generate_design` (HTML design page — slide / A4 doc), `generate_concept` (mode: `photorealistic` | `true_to_sketch`), `mix_match`, `generate_style`, `generate_model`, `generate_fabric`, `upscale_image`, `remove_background`, `image_to_sketch`, `multi_angle`, `split_layer`, `start_video` (+ `check_video`), `start_style_training` (+ `check_style_training`).
+
+`generate_design` turns a prompt (+ optional `imageUrls` to embed and a `format`: `slide-16-9` | `slide-4-3` | `a4-portrait` | `a4-landscape`) into a **web-page-style HTML design page** — a lookbook, pitch slide, or product one-pager — placed live on the canvas as an editable element (not a flat image). It can then be visually edited, prompt-edited, or exported to PDF / PNG / Figma. Great for packaging generated garment/model/fabric images into a presentable deck or document.
 
 ## Core rules
 
@@ -56,6 +58,7 @@ Common recipes — pick by intent. Full step lists and copy-ready prompts are in
 - **Brief → concept:** `list_projects` → (create/choose project) → `generate_concept` (photorealistic) from the user's description → share canvas link → iterate.
 - **Edit a reference / sketch:** `generate_concept` with `mode: true_to_sketch` and `referenceImageUrl` to restyle an existing image or sketch.
 - **Capsule collection:** create a project → `generate_model` → `generate_fabric` (×N) → `generate_style` / `mix_match` to assemble looks → review on one canvas.
+- **Lookbook / pitch slide / one-pager:** gather the image URLs of generated looks → `generate_design` with a `prompt`, a `format` (`slide-16-9` for decks, `a4-portrait` for documents), and those `imageUrls` → a live editable HTML design page lands on the canvas, ready to export to PDF / PNG / Figma.
 - **Tech-pack flat:** `image_to_sketch` on a garment photo to get a clean black-and-white technical flat.
 - **Product views:** `multi_angle` to get coordinated front / back / side views from one reference.
 - **Finishing:** `upscale_image`, `remove_background`, `split_layer` to polish a chosen result.

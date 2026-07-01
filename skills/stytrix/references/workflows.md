@@ -52,6 +52,18 @@ All write tools take a `projectId` and place results live on `https://www.stytri
 1. `start_style_training { styleName, referenceImageUrls, triggerWord?, loraType?, steps? }` → returns `replicateId` (charges up front; ~10–20 reference images recommended).
 2. Poll `check_style_training { replicateId }` until completed, then share the trained model.
 
+## 9. Lookbook / pitch slide / one-pager (HTML design page)
+
+Package generated results into a presentable slide or document, live on the canvas.
+
+1. Collect the public image URLs of the looks to feature (from earlier `generate_*` results on the canvas).
+2. `generate_design { projectId, prompt, format?, imageUrls? }`
+   - `prompt`: the headline, sections, and tone (e.g. "SS26 lookbook cover: brand 'AURA', 5 looks in a grid, editorial serif, warm neutral palette").
+   - `format`: `slide-16-9` (default) or `slide-4-3` for decks; `a4-portrait` / `a4-landscape` for documents.
+   - `imageUrls`: the images to embed into the layout.
+3. The result is a live, **editable** HTML design page on the canvas (not a flat image). Share the canvas link; the user can visually edit it, prompt-edit it, or export it to PDF / PNG / Figma.
+4. Iterate by calling `generate_design` again with a refined prompt, or let the user edit on the canvas.
+
 ## Credit awareness
 
 - Read-only tools (`whoami`, `list_projects`, `get_credits`, `check_*`) are free.
