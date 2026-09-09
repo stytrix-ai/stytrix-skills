@@ -4,7 +4,7 @@ description: Design fashion with AI using StyTrix. Use when the user wants to ge
 compatibility: Requires the StyTrix MCP server to be connected in the agent (Claude.ai, Claude Code, Cursor, Codex, or Gemini) and a StyTrix account with credits for generation tools.
 metadata:
   author: StyTrix
-  source: https://github.com/hirosichen/stytrix-skills
+  source: https://github.com/stytrix-ai/stytrix-skills
 allowed-tools: Bash(npx -y stytrix *)
 user-invocable: true
 ---

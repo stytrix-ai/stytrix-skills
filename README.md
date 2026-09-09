@@ -7,7 +7,7 @@ Agent skills for **[StyTrix](https://www.stytrix.com)** — design fashion with 
 Open your favorite agent (Claude Code, Codex, Cursor, etc.) and run:
 
 ```bash
-npx skills add https://github.com/hirosichen/stytrix-skills --skill stytrix
+npx skills add https://github.com/stytrix-ai/stytrix-skills --skill stytrix
 ```
 
 This installs the [`stytrix`](skills/stytrix/SKILL.md) skill into your agent's skills directory. Works with Claude Code, Cursor, Codex, Continue, and other agents that support the open Agent Skills format.
@@ -34,12 +34,12 @@ Once connected, just ask your agent things like:
 
 | Skill | Install | What it does |
 |-------|---------|--------------|
-| [`stytrix`](skills/stytrix/SKILL.md) | `npx skills add https://github.com/hirosichen/stytrix-skills --skill stytrix` | AI fashion design via the StyTrix MCP |
+| [`stytrix`](skills/stytrix/SKILL.md) | `npx skills add https://github.com/stytrix-ai/stytrix-skills --skill stytrix` | AI fashion design via the StyTrix MCP |
 
 ## Links
 
 - Website: https://www.stytrix.com
 - MCP docs: https://www.stytrix.com/mcp
-- MCP server repo: https://github.com/hirosichen/stytrix-mcp
-- CLI: https://github.com/hirosichen/stytrix-cli (`npx stytrix`)
+- MCP server repo: https://github.com/stytrix-ai/stytrix-mcp
+- CLI: https://github.com/stytrix-ai/stytrix-cli (`npx stytrix`)
 - Support: hello@stytrix.com
