@@ -43,3 +43,7 @@ Once connected, just ask your agent things like:
 - MCP server repo: https://github.com/stytrix-ai/stytrix-mcp
 - CLI: https://github.com/stytrix-ai/stytrix-cli (`npx stytrix`)
 - Support: hello@stytrix.com
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
